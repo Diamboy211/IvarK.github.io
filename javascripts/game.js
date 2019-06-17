@@ -71,7 +71,7 @@ var player = {
     interval: null,
     lastUpdate: new Date().getTime(),
     autobuyers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    costMultipliers: [new Decimal(1e3), new Decimal(1e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e10), new Decimal(1e12), new Decimal(1e15)],
+    costMultipliers: [new Decimal(4), new Decimal(1e3), new Decimal(1e4), new Decimal(5e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e10)],
     tickspeedMultiplier: new Decimal(10),
     chall2Pow: 1,
     chall3Pow: new Decimal(0.01),
