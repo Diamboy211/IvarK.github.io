@@ -16,7 +16,7 @@ var TIER_NAMES = [ null, "first", "second", "third", "fourth", "fifth", "sixth",
 var DISPLAY_NAMES = [ null, "First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth" ];
 var forceHardReset = false;
 var player = {
-    money: new Decimal(10),
+    money: new Decimal(1e100),
     tickSpeedCost: new Decimal(1000),
     tickspeed: new Decimal(1000),
     firstCost: new Decimal(10),
@@ -62,7 +62,7 @@ var player = {
     totalTimePlayed: 0,
     bestInfinityTime: 9999999999,
     thisInfinityTime: 0,
-    resets: 0,
+    resets: 10,
     galaxies: 0,
     tickDecrease: 0.9,
     totalmoney: new Decimal(0),
