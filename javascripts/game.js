@@ -448,9 +448,9 @@ function getGalaxyCostScalingStart() {
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + ((player.galaxies) * 60);
-    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies) * 52)
-    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies) * 90)
+    let amount = 80 + ((player.galaxies / 3) * 60);
+    if (player.timestudy.studies.includes(42)) amount = 80 + ((player.galaxies / 3) * 52)
+    if (player.currentChallenge == "challenge4") amount = 99 + ((player.galaxies / 3) * 90)
 
     let galaxyCostScalingStart = getGalaxyCostScalingStart()
     if (player.currentEternityChall == "eterc5") {
@@ -1645,7 +1645,7 @@ function galaxyReset() {
         bestInfinityTime: player.bestInfinityTime,
         thisInfinityTime: player.thisInfinityTime,
         resets: 0,
-        galaxies: player.galaxies + 1,
+        galaxies: player.galaxies + 3,
         totalmoney: player.totalmoney,
         tickDecrease: player.tickDecrease - 0.03,
         interval: null,
