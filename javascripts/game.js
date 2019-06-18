@@ -1451,7 +1451,7 @@ buyAutobuyer = function(id) {
         }
         if (b1) giveAchievement("Bulked up");
     } else {
-        player.autobuyers[id].interval = Math.max(player.autobuyers[id].interval*0.6, 100);
+        player.autobuyers[id].interval = Math.max(player.autobuyers[id].interval*0.005, 100);
         if (player.autobuyers[id].interval > 120) player.autobuyers[id].cost *= 2; //if your last purchase wont be very strong, dont double the cost
     }
     updateAutobuyers();
