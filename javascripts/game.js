@@ -1443,7 +1443,7 @@ buyAutobuyer = function(id) {
     if (player.autobuyers[id].bulk >= 1e100) return false;
     player.infinityPoints = player.infinityPoints.minus(player.autobuyers[id].cost);
     if (player.autobuyers[id].interval <= 100) {
-        player.autobuyers[id].bulk = Math.min(player.autobuyers[id].bulk * 2, 1e100);
+        player.autobuyers[id].bulk = Math.min(player.autobuyers[id].bulk * 1024, 1e100);
         player.autobuyers[id].cost = Math.ceil(2.4*player.autobuyers[id].cost);
         var b1 = true;
 	    for (let i=0;i<8;i++) {
@@ -1451,7 +1451,7 @@ buyAutobuyer = function(id) {
         }
         if (b1) giveAchievement("Bulked up");
     } else {
-        player.autobuyers[id].interval = Math.max(player.autobuyers[id].interval*0.005, 100);
+        player.autobuyers[id].interval = Math.max(player.autobuyers[id].interval*0.000005, 100);
         if (player.autobuyers[id].interval > 120) player.autobuyers[id].cost *= 2; //if your last purchase wont be very strong, dont double the cost
     }
     updateAutobuyers();
