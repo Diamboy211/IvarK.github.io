@@ -174,12 +174,12 @@ function hasInfinityMult(tier) {
     }
     
     function getDimensionPowerMultiplier(tier) {
-        let dimMult = 2.5;
+        let dimMult = 3.456789;
     
     
         if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(10/0.30,Math.random())*0.30
     
-        if (player.infinityUpgrades.includes('dimMult')) dimMult *= 1.1;
+        if (player.infinityUpgrades.includes('dimMult')) dimMult *= 1.3;
         if (player.achievements.includes("r58")) dimMult *= 1.01;
         dimMult += ECTimesCompleted("eterc3") * 0.8
         return dimMult;
