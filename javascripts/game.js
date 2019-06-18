@@ -441,9 +441,9 @@ function getInfinitied() {return Math.max(player.infinitied + player.infinitiedB
 
 
 function getGalaxyCostScalingStart() {
-    var n = 100 + ECTimesCompleted("eterc5")*5
-    if (player.timestudy.studies.includes(223)) n += 7
-    if (player.timestudy.studies.includes(224)) n += Math.floor(player.resets/2000)
+    var n = 100 + ECTimesCompleted("eterc5")*25
+    if (player.timestudy.studies.includes(223)) n += 22
+    if (player.timestudy.studies.includes(224)) n += Math.floor(player.resets/666)
     return n
 }
 
@@ -457,7 +457,7 @@ function getGalaxyRequirement() {
         amount += Math.pow(player.galaxies, 2) + player.galaxies
     }
     else if ((player.galaxies) >= galaxyCostScalingStart) {
-        amount += Math.pow((player.galaxies)-(galaxyCostScalingStart-1),2)+(player.galaxies)-(galaxyCostScalingStart-1)
+        amount += Math.pow((player.galaxies)-(galaxyCostScalingStart-1),1.5)+(player.galaxies)-(galaxyCostScalingStart-1)
     }
     if (player.galaxies >= 800) {
         amount = Math.floor(amount * Math.pow(1.002, (player.galaxies-799)))
@@ -466,7 +466,7 @@ function getGalaxyRequirement() {
     if (player.infinityUpgrades.includes("resetBoost")) amount -= 9;
     if (player.challenges.includes("postc5")) amount -= 1;
 
-    return amount;
+    return Math.floor(amount);
 }
 
 function getETA(cost) {
@@ -1599,16 +1599,16 @@ function galaxyReset() {
     if (player.sacrificed == 0) giveAchievement("I don't believe in Gods");
     player = {
         money: player.achievements.includes("r111") ? player.money : new Decimal(10),
-        tickSpeedCost: new Decimal(1000),
-        tickspeed: new Decimal(1000),
-        firstCost: new Decimal(10),
-        secondCost: new Decimal(100),
-        thirdCost: new Decimal(10000),
-        fourthCost: new Decimal(1000000),
-        fifthCost: new Decimal(1e9),
-        sixthCost: new Decimal(1e13),
-        seventhCost: new Decimal(1e18),
-        eightCost: new Decimal(1e24),
+        tickSpeedCost: new Decimal(100),
+        tickspeed: new Decimal(100),
+        firstCost: new Decimal(1),
+        secondCost: new Decimal(10),
+        thirdCost: new Decimal(100),
+        fourthCost: new Decimal(10000),
+        fifthCost: new Decimal(1e7),
+        sixthCost: new Decimal(1e9),
+        seventhCost: new Decimal(1e12),
+        eightCost: new Decimal(1e16),
         firstAmount: new Decimal(0),
         secondAmount: new Decimal(0),
         thirdAmount: new Decimal(0),
@@ -1653,7 +1653,7 @@ function galaxyReset() {
         achPow: player.achPow,
         newsArray: player.newsArray,
         autobuyers: player.autobuyers,
-        costMultipliers: [new Decimal(1e3), new Decimal(1e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e10), new Decimal(1e12), new Decimal(1e15)],
+        costMultipliers: [new Decimal(1e2), new Decimal(1e3), new Decimal(1e4), new Decimal(1e5), new Decimal(1e6), new Decimal(1e8), new Decimal(1e9), new Decimal(1e12)],
         tickspeedMultiplier: new Decimal(10),
         chall2Pow: player.chall2Pow,
         chall3Pow: new Decimal(0.01),
