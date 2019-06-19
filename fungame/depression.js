@@ -70,7 +70,7 @@ function buyStuff(id) {
   }
   game.amounts[i] = game.amounts[i].plus(1).max(game.amounts[i].times(1.05).min(game.amounts[id].times(10000)))
   game.depression = game.depression.minus(game.costs[i])
-  game.costs[i] = game.costs[i].times(2)
+  game.costs[i] = game.costs[i].times(1.2)
   }
 }
 
