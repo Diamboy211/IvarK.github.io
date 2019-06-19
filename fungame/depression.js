@@ -161,7 +161,7 @@ setInterval(function() {
   document.getElementById(game.amounts.length).click()}
   
   document.getElementById("amount").innerHTML = formatValue(game.depression, 2)
-}, 33)
+}, 1)
 
 
 setInterval(function() { save() }, 5000)
