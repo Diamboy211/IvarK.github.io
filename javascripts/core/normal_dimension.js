@@ -177,7 +177,7 @@ function hasInfinityMult(tier) {
         let dimMult = 3600;
     
     
-        if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(10/0.30,Math.random())*0.30
+        if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(24000/300,Math.random())*300
     
         if (player.infinityUpgrades.includes('dimMult')) dimMult *= 1.44;
         if (player.achievements.includes("r58")) dimMult *= 2;
