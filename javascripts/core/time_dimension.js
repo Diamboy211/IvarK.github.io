@@ -119,8 +119,8 @@ function buyTimeDimension(tier) {
   if (player.eternityPoints.lt(dim.cost)) return false
 
   player.eternityPoints = player.eternityPoints.minus(dim.cost)
-  dim.amount = dim.amount.plus(1);
-  dim.bought += 1
+  dim.amount = dim.amount.plus(10);
+  dim.bought += 10
   dim.cost = Decimal.pow(timeDimCostMults[tier], dim.bought).times(timeDimStartCosts[tier])
   if (dim.cost.gte(Number.MAX_VALUE)) {
       dim.cost = Decimal.pow(timeDimCostMults[tier]*1.5, dim.bought).times(timeDimStartCosts[tier])
@@ -131,7 +131,7 @@ function buyTimeDimension(tier) {
   if (tier > 4) {
     dim.cost = Decimal.pow(timeDimCostMults[tier]*100, dim.bought).times(timeDimStartCosts[tier])
   }
-  dim.power = dim.power.times(2)
+  dim.power = dim.power.times(1024)
   updateEternityUpgrades()
   return true
 }
