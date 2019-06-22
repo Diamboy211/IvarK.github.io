@@ -110,7 +110,7 @@ function getDimensionRateOfChange(tier) {
       else toGain = getDimensionProductionPerSecond(tier + 2);
   }
   var current = player[name + 'Amount'].max(1);
-  var change  = toGain.times(10).dividedBy(current);
+  var change  = toGain.times(80).dividedBy(current);
 
   return change;
 }
@@ -174,14 +174,14 @@ function hasInfinityMult(tier) {
     }
     
     function getDimensionPowerMultiplier(tier) {
-        let dimMult = 2;
+        let dimMult = 3600;
     
     
         if (player.currentChallenge == "challenge9" || player.currentChallenge == "postc1") dimMult = Math.pow(10/0.30,Math.random())*0.30
     
-        if (player.infinityUpgrades.includes('dimMult')) dimMult *= 1.1;
-        if (player.achievements.includes("r58")) dimMult *= 1.01;
-        dimMult += ECTimesCompleted("eterc3") * 0.8
+        if (player.infinityUpgrades.includes('dimMult')) dimMult *= 1.44;
+        if (player.achievements.includes("r58")) dimMult *= 2;
+        dimMult += ECTimesCompleted("eterc3") * 2400
         return dimMult;
     }
     
