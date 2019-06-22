@@ -186,7 +186,7 @@ function resetInfDimensions() {
 
 }
 
-var infCostMults = [null, 1e3, 1e6, 1e8, 1e10, 1e15, 1e20, 1e25, 1e30]
+var infCostMults = [null, 1e3, 1e3, 1e3, 1e3, 1e4, 1e5, 1e6, 1e7]
 var infPowerMults = [null, 50, 30, 10, 5, 5, 5, 5, 5]
 
 function buyManyInfinityDimension(tier) {
