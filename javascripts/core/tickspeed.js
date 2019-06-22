@@ -40,7 +40,7 @@ function getTickSpeedMultiplier() {
       if (player.timestudy.studies.includes(212)) galaxies *= Math.min(Math.pow(player.timeShards.max(2).log2(), 0.005), 1.1)
       if (player.timestudy.studies.includes(232)) galaxies *= Math.pow(1+player.galaxies/1000, 0.2)
 
-      return baseMultiplier * (Math.pow(perGalaxy, (galaxies-2)))
+      return baseMultiplier * (Math.pow(perGalaxy, (galaxies-2))) * 5
   }
 }
 
