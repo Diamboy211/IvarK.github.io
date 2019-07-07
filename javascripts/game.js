@@ -502,9 +502,7 @@ function getDimensionDescription(tier) {
 
 function getDimensionRateOfChange(tier) {
     if (tier == 8) {
-		if (player.reset > 4 && player.eightBought = 1) {
-			return new Decimal(1)
-		}
+	    return 0;
     }
 
     let toGain = getDimensionProductionPerSecond(tier + 1)
@@ -539,8 +537,8 @@ function getShiftRequirement() {
 }
 
 function getGalaxyRequirement() {
-    let amount = 80 + (player.galaxies * 60);
-    if (player.currentChallenge == "challenge4") amount = 99 + (player.galaxies * 90)
+    let amount = 30 + (player.galaxies * 20);
+    if (player.currentChallenge == "challenge4") amount = 40 + (player.galaxies * 30)
     if (player.infinityUpgrades.includes("resetBoost")) {
         amount -= 9;
     }
