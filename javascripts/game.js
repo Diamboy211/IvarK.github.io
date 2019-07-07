@@ -502,7 +502,9 @@ function getDimensionDescription(tier) {
 
 function getDimensionRateOfChange(tier) {
     if (tier == 8) {
-        return 0;
+		if (player.reset > 4 && player.eightBought = 1) {
+			return 1;
+		}
     }
 
     let toGain = getDimensionProductionPerSecond(tier + 1)
