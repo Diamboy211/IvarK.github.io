@@ -503,7 +503,7 @@ function getDimensionDescription(tier) {
 function getDimensionRateOfChange(tier) {
     if (tier == 8) {
 		if (player.reset > 4 && player.eightBought = 1) {
-			return 1;
+			return new Decimal(1)
 		}
     }
 
