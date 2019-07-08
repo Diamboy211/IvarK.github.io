@@ -513,7 +513,7 @@ function getDimensionRateOfChange(tier) {
         else toGain = getDimensionProductionPerSecond(tier + 2);
     }
     const current = Decimal.max(player[name + 'Amount'], 1);
-    const change  = toGain.times(100).dividedBy(current);
+    const change  = toGain.times(10).dividedBy(current);
     
     return change;
 }
@@ -1084,13 +1084,13 @@ function canBuyDimension(tier) {
 }
 
 function getDimensionPowerMultiplier(tier) {
-    let dimMult = 2;
+    let dimMult = 2.2;
 
 
     if (player.currentChallenge == "challenge9") dimMult = Decimal.pow(10/0.30,Decimal.random())*0.30
 
     if (player.infinityUpgrades.includes('dimMult')) {
-        dimMult *= 1.1;
+        dimMult *= 1.3;
     }
     
     return dimMult;
