@@ -520,7 +520,7 @@ function getDimensionRateOfChange(tier) {
 
 function getShiftRequirement() {
     let tier   = Decimal.min(player.resets + 3, 8);
-    let amount = 10;
+    let amount = 9;
     if (player.currentChallenge == "challenge4") {
         tier = Decimal.min(player.resets + 3, 6)
         if (tier == 6) amount += (player.resets - 2) * 20;
