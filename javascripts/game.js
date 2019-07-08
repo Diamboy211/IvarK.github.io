@@ -513,7 +513,7 @@ function getDimensionRateOfChange(tier) {
         else toGain = getDimensionProductionPerSecond(tier + 2);
     }
     const current = Decimal.max(player[name + 'Amount'], 1);
-    const change  = toGain.times(10).dividedBy(current);
+    const change  = toGain.times(100).dividedBy(current);
     
     return change;
 }
