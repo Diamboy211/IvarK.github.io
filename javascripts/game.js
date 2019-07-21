@@ -3069,7 +3069,7 @@ setInterval(function () {
     } else {
 	Marathon = 0; }
 
-    for (let tier = 1; tier <= 8; ++tier) {
+    for (let tier = 1; tier <= 9; ++tier) {
         const name = TIER_NAMES[tier];
         if (player.currentChallenge != "challenge10") {
             document.getElementById(name).className = canAfford(player[name + 'Cost']) ? 'storebtn' : 'unavailablebtn';
